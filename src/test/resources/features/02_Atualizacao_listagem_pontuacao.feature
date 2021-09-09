@@ -1,18 +1,13 @@
 #Author: Kethilyn Leal
 #language: pt
 
-@nExecuta
+@Executa
 Funcionalidade: Testes de funcionalidade no aplicativo IguatemiOne
   Eu como usuário quero executar testes no aplicativo
 
   @Executa
-  Cenario: Login positivo com conta existente
+  Cenario: Atualizacao de listagem de pontuacao do holder
     Dado que eu acesse o aplicativo
     Quando insiro os dados para fazer o login positivo
-    Entao finalizo o teste
-
-  @Executa
-  Cenario: Login negativo com conta existente
-    Dado que eu acesse o aplicativo
-    Quando insiro os dados para fazer o login negativo sem senha
+    E valido listagem de pontuacao e layout
     Entao finalizo o teste

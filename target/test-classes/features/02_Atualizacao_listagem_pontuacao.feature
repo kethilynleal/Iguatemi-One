@@ -5,9 +5,9 @@
 Funcionalidade: Testes de funcionalidade no aplicativo IguatemiOne
   Eu como usuário quero executar testes no aplicativo
 
-  @nExecuta
-  Cenario: Cadastro de membros da familia
+  @Executa
+  Cenario: Atualizacao de listagem de pontuacao do holder
     Dado que eu acesse o aplicativo
     Quando insiro os dados para fazer o login positivo
-    E incluo os membros da familia
+    E valido listagem de pontuacao e layout
     Entao finalizo o teste

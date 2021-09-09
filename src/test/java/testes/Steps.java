@@ -30,9 +30,9 @@ public class Steps {
         nav.loginAppNegativo("Faco_logins_no_app_negativos");
     }
 
-    @E("incluo os membros da familia")
-    public void incluo_os_membros_da_familia() throws IOException, InterruptedException {
-        nav.incluirMembros("Incluo_os_membros_da_familia");
+    @E("valido listagem de pontuacao e layout")
+    public void valido_listagem_de_pontuacao_e_layout() throws IOException, InterruptedException {
+        nav.validolistagemDePontuacaoeLayout("Incluo_os_membros_da_familia");
     }
 
     @Entao("finalizo o teste")

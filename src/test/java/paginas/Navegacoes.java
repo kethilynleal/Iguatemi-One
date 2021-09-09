@@ -58,7 +58,18 @@ public class Navegacoes {
         metodos.capturarTelaLogins("03_Login_App_negativo_sem_email");
     }
 
-    public void incluirMembros(String descricaoPasso) throws IOException, InterruptedException {
+    public void validolistagemDePontuacaoeLayout(String descricaoPasso) throws IOException, InterruptedException {
+
+        metodos.toque(el.getMeusPontos(),"Clico_na_pontuacao_do_holder");
+        metodos.pausa(2000,"Espero_dois_minutos");
+        metodos.capturarTelaPontuacao("04_Listagem_pontuacao_do_holder");
+        metodos.esperarElemento(el.getCliqueNoMembroDoPlanoFamilia(),"Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getCliqueNoMembroDoPlanoFamilia(),"Clico_no_membro_do_plano_familia");
+        metodos.capturarTelaPontuacaoDosMembros("05_Pontuação_de_membros_do_plano_familia");
+
+
+
+
 
     }
 

@@ -84,6 +84,31 @@ public class Metodos {
     }
 
     /**
+     * Capturar Tela de Pontuacao
+     *
+     * @author Kethilyn Leal
+     *
+     */
+    public void capturarTelaPontuacao(String nomePrint) throws IOException {
+
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("./target/Evidencias/Pontuacao/" + nomePrint + ".png"));
+    }
+
+    /**
+     * Capturar Tela de Pontuacao de membros
+     *
+     * @author Kethilyn Leal
+     *
+     */
+    public void capturarTelaPontuacaoDosMembros(String nomePrint) throws IOException {
+
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("./target/Evidencias/Pontuacaodemembros/" + nomePrint + ".png"));
+    }
+
+
+    /**
      * Toque
      *
      * @author Kethilyn Leal
