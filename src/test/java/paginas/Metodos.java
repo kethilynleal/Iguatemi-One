@@ -30,7 +30,7 @@ public class Metodos {
     /**
      * Abrir Aplicativo
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void abrirAplicativo(String platformVersion, String appPackage, String appActivity, String descricaoPasso) throws MalformedURLException {
@@ -50,7 +50,7 @@ public class Metodos {
     /**
      * Capturar Tela Logins
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void capturarTelaLogins(String nomePrint) throws IOException {
@@ -60,9 +60,21 @@ public class Metodos {
     }
 
     /**
+     * Capturar Tela Plano Familia
+     *
+     * @author Kethilyn Leal
+     *
+     */
+    public void capturarTelaPlanoFamilia(String nomePrint) throws IOException {
+
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("./target/Evidencias/Plano_Familia/" + nomePrint + ".png"));
+    }
+
+    /**
      * Capturar Tela de Erros
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void capturarTelaErros(String nomePrint) throws IOException {
@@ -74,7 +86,7 @@ public class Metodos {
     /**
      * Toque
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void toque(By elemento, String descricaoPasso) throws IOException {
@@ -89,7 +101,7 @@ public class Metodos {
     /**
      * Toque e Desliza
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void toqueDesliza(int xEntrada, int yEntrada, int xSaida, int ySaida, String descricaoPasso) throws IOException {
@@ -109,7 +121,7 @@ public class Metodos {
     /**
      * Clique por Coordenada
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void cliqueCoordenada(int xCoord, int yCoord, String descricaoPasso) throws IOException {
@@ -125,7 +137,7 @@ public class Metodos {
     /**
      * Pausa
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void pausa(int tempo, String descricaoPasso) throws InterruptedException, IOException {
@@ -140,7 +152,7 @@ public class Metodos {
     /**
      * Validar Texto
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void validarTexto(By elemento, String texto, String descricaoPasso) throws IOException {
@@ -156,7 +168,7 @@ public class Metodos {
     /**
      * Pressionar tecla Seta Direita
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void teclaSetaDireita(String descricaoPasso) throws IOException {
@@ -173,7 +185,7 @@ public class Metodos {
     /**
      * Limpar texto
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void limparTexto(By elemento, String descricaoPasso) throws IOException {
@@ -190,7 +202,7 @@ public class Metodos {
     /**
      * Escrever
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void escrever(By elemento, String texto, String descricaoPasso) throws IOException {
@@ -205,7 +217,7 @@ public class Metodos {
     /**
      * Esperar Elemento Presente na Tela
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
 
@@ -223,7 +235,7 @@ public class Metodos {
     /**
      * Fechar Aplicativo
      *
-     * @author Phelipe S Miranda
+     * @author Kethilyn Leal
      *
      */
     public void fecharAplicativo(String descricaoPasso) throws IOException {
