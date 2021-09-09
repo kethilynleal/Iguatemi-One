@@ -30,6 +30,11 @@ public class Steps {
         nav.loginAppNegativo("Faco_logins_no_app_negativos");
     }
 
+    @E("incluo os membros da familia")
+    public void incluo_os_membros_da_familia() throws IOException, InterruptedException {
+        nav.incluirMembros("Incluo_os_membros_da_familia");
+    }
+
     @Entao("finalizo o teste")
     public void finalizo_o_teste() throws IOException {
         metodos.fecharAplicativo("Fecho_aplicativo_e_encerro_o_teste");

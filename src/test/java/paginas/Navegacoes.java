@@ -58,4 +58,8 @@ public class Navegacoes {
         metodos.capturarTelaLogins("03_Login_App_negativo_sem_email");
     }
 
+    public void incluirMembros(String descricaoPasso) throws IOException, InterruptedException {
+
+    }
+
 }
