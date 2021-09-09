@@ -20,14 +20,14 @@ public class Steps {
         metodos.abrirAplicativo("11.0", "com.iguatemi.one", "com.iguatemi.one.MainActivity", "Abro_o_aplicativo");
     }
 
-    @Quando("insiro os dados para fazer o login")
-    public void insiro_os_dados_para_fazer_o_login() throws IOException, InterruptedException {
-        nav.loginApp("Faco_login_no_app");
+    @Quando("insiro os dados para fazer o login positivo")
+    public void insiro_os_dados_para_fazer_o_login_positivo() throws IOException, InterruptedException {
+        nav.loginAppPositivo("Faco_login_no_app_positivo");
     }
 
-    @E("tiro evidencia")
-    public void tiro_evidencia() throws IOException {
-        metodos.capturarTela("Login_App");
+    @Quando("insiro os dados para fazer o login negativo sem senha")
+    public void insiro_os_dados_para_fazer_o_login_negativo_sem_senha() throws IOException, InterruptedException {
+        nav.loginAppNegativo("Faco_logins_no_app_negativos");
     }
 
     @Entao("finalizo o teste")

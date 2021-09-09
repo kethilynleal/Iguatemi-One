@@ -48,15 +48,15 @@ public class Metodos {
     }
 
     /**
-     * Capturar Tela
+     * Capturar Tela Logins
      *
      * @author Phelipe S Miranda
      *
      */
-    public void capturarTela(String nomePrint) throws IOException {
+    public void capturarTelaLogins(String nomePrint) throws IOException {
 
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("./target/Evidencias/" + nomePrint + ".png"));
+        FileUtils.copyFile(scrFile, new File("./target/Evidencias/Logins/" + nomePrint + ".png"));
     }
 
     /**
@@ -107,6 +107,22 @@ public class Metodos {
     }
 
     /**
+     * Clique por Coordenada
+     *
+     * @author Phelipe S Miranda
+     *
+     */
+    public void cliqueCoordenada(int xCoord, int yCoord, String descricaoPasso) throws IOException {
+        try {
+            TouchAction action = new TouchAction(driver);
+            action.tap(PointOption.point(xCoord,yCoord));
+        } catch (Exception e) {
+            capturarTelaErros("Erro_ao-tentar_" + descricaoPasso);
+            Assert.fail(LocalDateTime.now() + "Erro_ao-tentar_" + descricaoPasso);
+        }
+    }
+
+    /**
      * Pausa
      *
      * @author Phelipe S Miranda
@@ -148,6 +164,23 @@ public class Metodos {
         try {
             Actions action = new Actions(driver);
             action.sendKeys(Keys.ARROW_RIGHT).perform();
+        } catch (Exception e) {
+            capturarTelaErros("Erro_ao-tentar_" + descricaoPasso);
+            Assert.fail(LocalDateTime.now() + "Erro_ao-tentar_" + descricaoPasso);
+        }
+    }
+
+    /**
+     * Limpar texto
+     *
+     * @author Phelipe S Miranda
+     *
+     */
+    public void limparTexto(By elemento, String descricaoPasso) throws IOException {
+
+        try {
+            driver.findElement(elemento).clear();
+
         } catch (Exception e) {
             capturarTelaErros("Erro_ao-tentar_" + descricaoPasso);
             Assert.fail(LocalDateTime.now() + "Erro_ao-tentar_" + descricaoPasso);
