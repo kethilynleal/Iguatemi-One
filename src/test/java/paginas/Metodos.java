@@ -107,6 +107,18 @@ public class Metodos {
         FileUtils.copyFile(scrFile, new File("./target/Evidencias/Pontuacaodemembros/" + nomePrint + ".png"));
     }
 
+    /**
+     * Capturar Tela de Notas Fiscais
+     *
+     * @author Kethilyn Leal
+     *
+     */
+    public void capturarTelaDeNotasFiscais(String nomePrint) throws IOException {
+
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("./target/Evidencias/NotasFiscais/" + nomePrint + ".png"));
+    }
+
 
     /**
      * Toque

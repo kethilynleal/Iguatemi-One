@@ -67,10 +67,17 @@ public class Navegacoes {
         metodos.toque(el.getCliqueNoMembroDoPlanoFamilia(),"Clico_no_membro_do_plano_familia");
         metodos.capturarTelaPontuacaoDosMembros("05_Pontuação_de_membros_do_plano_familia");
 
-
-
-
-
     }
 
+    public void verificoNotasFiscaisLancadas(String descricaoPasso) throws IOException, InterruptedException {
+
+        metodos.toque(el.getBotaoNotaFiscal(), "Clico_no_botao_nota_fiscal");
+        metodos.esperarElemento(el.getConsultarNotaFiscal(),"Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getConsultarNotaFiscal(), "Clico_no_botao_para_consultar_notas_ficais");
+        metodos.pausa(1000, "Espero_um_segundo");
+        metodos.toque(el.getReprovadas(), "Clico_nas_notas_reprovadas");
+        metodos.toque(el.getPendentes(), "Clico_nas_notas_pendentes");
+        metodos.capturarTelaDeNotasFiscais("06_Captura_de_tela_de_Notas_fiscais");
+
+    }
 }
