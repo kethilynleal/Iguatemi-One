@@ -20,10 +20,11 @@ public class ElementosApp {
     private By cliqueNoMembroDoPlanoFamilia = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup\n");
     private By botaoNotaFiscal = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]\n");
     private By consultarNotaFiscal = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.TextView\n");
-    private By aprovadas = By.xpath("//android.view.View[@content-desc=\"Aprovadas\"]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView\n");
-    private By reprovadas = By.xpath("//android.view.View[@content-desc=\"Reprovadas\"]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView\n");
-    private By pendentes = By.xpath("//android.view.View[@content-desc=\"Pendentes\"]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView\n");
+    private By aprovadas = By.xpath("//android.view.View[@content-desc=\"Aprovadas\"]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView\n");
+    private By reprovadas = By.xpath("//android.view.View[@content-desc=\"Reprovadas\"]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView\n");
+    private By pendentes = By.xpath("//android.view.View[@content-desc=\"Pendentes\"]/android.view.ViewGroup\n");
     private By home = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.TextView\n");
+    private By validarTextoNotasFiscais = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.TextView\n");
 
 
 
@@ -52,6 +53,6 @@ public class ElementosApp {
     public By getReprovadas() {return reprovadas;}
     public By getPendentes() {return pendentes;}
     public By getHome() {return home;}
-
+    public By getValidarTextoNotasFiscais() {return validarTextoNotasFiscais;}
 }
 

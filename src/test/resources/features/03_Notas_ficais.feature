@@ -9,6 +9,5 @@ Funcionalidade: Testes de funcionalidade no aplicativo IguatemiOne
   Cenario: Layout de Notas Fiscais
     Dado que eu acesse o aplicativo
     Quando insiro os dados para fazer o login positivo
-    E verifico notas fiscais lancadas
-    E valido Layout de pagina de notas fiscais
+    E verifico notas fiscais lancadas e valido layout
     Entao finalizo o teste

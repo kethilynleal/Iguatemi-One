@@ -1,7 +1,7 @@
 #Author: Kethilyn Leal
 #language: pt
 
-@nExecuta
+@Executa
 Funcionalidade: Testes de funcionalidade no aplicativo IguatemiOne
   Eu como usuário quero executar testes no aplicativo
 

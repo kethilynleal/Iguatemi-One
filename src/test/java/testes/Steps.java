@@ -35,16 +35,10 @@ public class Steps {
         nav.validolistagemDePontuacaoeLayout("valido_listagem_de_pontuacao_de_membros");
     }
 
-    @E("verifico notas fiscais lancadas")
-    public void verifico_notas_fiscais_lancadas() throws IOException, InterruptedException {
-        nav.verificoNotasFiscaisLancadas("verifico_notas_fiscais_lancadas");
+    @E("verifico notas fiscais lancadas e valido layout")
+    public void verifico_notas_fiscais_lancadas_e_valido_layout() throws IOException, InterruptedException {
+        nav.verificoNotasFiscaisLancadasEValidoLayout("verifico_notas_fiscais_lancadas");
     }
-
-    @E("valido Layout de pagina de notas fiscais")
-    public void valido_Layout_de_pagina_de_notas_fiscais() throws IOException, InterruptedException {
-        nav.validolistagemDePontuacaoeLayout("Valido_layout_de_notas_fiscais");
-    }
-
 
     @Entao("finalizo o teste")
     public void finalizo_o_teste() throws IOException {
