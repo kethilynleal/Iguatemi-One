@@ -61,12 +61,13 @@ public class Navegacoes {
     public void validolistagemDePontuacaoeLayout(String descricaoPasso) throws IOException, InterruptedException {
 
         metodos.toque(el.getMeusPontos(),"Clico_na_pontuacao_do_holder");
-        metodos.pausa(2000,"Espero_dois_minutos");
+        metodos.pausa(5000,"Espero_dois_minutos");
         metodos.capturarTelaPontuacao("01_Listagem_pontuacao_do_holder");
         metodos.esperarElemento(el.getCliqueNoMembroDoPlanoFamilia(),"Espero_elemento_ficar_clicavel");
         metodos.toque(el.getCliqueNoMembroDoPlanoFamilia(),"Clico_no_membro_do_plano_familia");
-        metodos.pausa(1000,"Espero_meio_segundo");
+        metodos.pausa(5000,"Espero_meio_segundo");
         metodos.capturarTelaPontuacao("02_Pontuação_de_membros_do_plano_familia");
+        metodos.validarTexto(el.getValidarTextoPlanoFamilia(),"Plano Família: Kethilyn","Valido_texto_de_plano_familia");
 
     }
 
@@ -99,35 +100,45 @@ public class Navegacoes {
         metodos.escrever(el.getNome(),"Teste", "Escrevo_nome");
         metodos.esperarElemento(el.getSobreNome(),"Espero_elemento_ficar_clicavel");
         metodos.escrever(el.getSobreNome(),"Testes","Escrevo_sobrenome");
+        metodos.esconderTeclado("Escondo_teclado");
         metodos.toque(el.getClicoEmGenero(),"Clico_na_opcao_genero");
         metodos.esperarElemento(el.getEscolhoGeneroFeminino(),"Espero_elemento_ficar_clicavel");
         metodos.toque(el.getEscolhoGeneroFeminino(),"Escolho_sexo_feminino");
-        metodos.toque(el.getDadosPessoais2(),"Clico_em_dados_pessoais_para_esconder_o_teclado");
+        metodos.esconderTeclado("Escondo_teclado");
         metodos.esperarElemento(el.getClicoEmCpf(),"Espero_elemento_ficar_clicavel");
         metodos.toque(el.getClicoEmCpf(),"Clico_na_opcao_cpf");
         metodos.escrever(el.getCpf(),"44559662851", "Insiro_o_cpf");
-        metodos.toque(el.getDadosPessoais3(),"Clico_em_dados_pessoais_para_esconder_o_teclado");
+        metodos.esconderTeclado("Escondo_teclado");
+        metodos.esperarElemento(el.getClicoNaDataDeNascimento(),"Espero_elemento");
         metodos.toque(el.getClicoNaDataDeNascimento(),"Clico_na_data_de_nascimento");
+        metodos.esperarElemento(el.getBotaoOkDataDeNascimento(),"Espero_elemento");
         metodos.toque(el.getBotaoOkDataDeNascimento(),"Clico_no_botao_ok_na_data_de_nascimento");
-        metodos.toqueDesliza(850,500,200,500,"toco_e_deslizo");
-        metodos.escrever(el.getNovoEmail(),"notep22007@silbarts.com", "Insiro_novo_email");
+        metodos.esperarElemento(el.getPrimeiraSeta(),"Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getPrimeiraSeta(),"Clico_na_seta_para_prosseguir");
+        metodos.esperarElemento(el.getNovoEmail(),"Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getNovoEmail(),"Clico_em_criar_novo_email");
+        metodos.esperarElemento(el.getNovoEmail(),"Espero_elemento_ficar_clicavel");
+        metodos.escrever(el.getNovoEmail(),"motic41912@sicmag.com", "Insiro_novo_email");
+        metodos.esconderTeclado("Escondo_teclado");
+        metodos.esperarElemento(el.getTelefone(),"Espero_elemento_ficar_clicavel");
         metodos.escrever(el.getTelefone(),"11952465231","Insiro_numero_de_telefone");
-        metodos.toqueDesliza(850,500,200,500,"toco_e_deslizo");
+        metodos.esconderTeclado("Escondo_teclado");
+        metodos.esperarElemento(el.getSegundaSeta(),"Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getSegundaSeta(),"Clico_na_seta_para_prosseguir");
+        metodos.esperarElemento(el.getCriarSenha(),"Espero_elemento_ficar_clicavel");
         metodos.escrever(el.getCriarSenha(),"Mudar@321", "Crio_nova_senha");
+        metodos.esconderTeclado("Escondo_teclado");
         metodos.toque(el.getAceitoEnvioDePromocoesENovidadesPorEmail(),"Aceito_envio_de_Novidades_e_Pomocoes_por_email");
         metodos.toque(el.getAceitoEnvioDePromocoesENovidadesPorNotificacao(),"Aceito_envio_de_Novidades_e_Pomocoes_por_notificacao");
         metodos.toque(el.getAceitoEnvioDePromocoesENovidadesPorSms(),"Aceito_envio_de_Novidades_e_Pomocoes_por_SMS");
         metodos.toque(el.getAceiteDeRegulamento(),"Aceito_politica_do_Iguatemi_one");
         metodos.toque(el.getAceiteDePolitica(),"Aceito_termos_de_politica_de_uso_de_dados");
-        metodos.toqueDesliza(850,500,200,500,"toco_e_deslizo");
+        metodos.pausa(2000,"Espero_dois_sugundos");
+        metodos.toqueDesliza(486,500,598,500,"toco_e_deslizo");
+        metodos.esperarElemento(el.getTerceiraSeta(),"Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getTerceiraSeta(),"Clico_na_seta_para_prosseguir");
+        metodos.esperarElemento(el.getShoppingSaoPaulo(),"Espero_elemento_ficar_clicavel");
         metodos.toque(el.getShoppingSaoPaulo(),"Escolho_Shopping_Sao_Paulo");
-
-
-
-
-
-
-
 
 
     }

@@ -270,6 +270,26 @@ public class Metodos {
     }
 
     /**
+     * Esconder Teclado
+     *
+     * @author Kethilyn Leal
+     *
+     */
+
+    public void esconderTeclado(String descricaoPasso) throws IOException {
+
+        try {
+            driver.hideKeyboard();
+        } catch (Exception e) {
+            capturarTelaErros("Erro_ao-tentar_" + descricaoPasso);
+            Assert.fail(LocalDateTime.now() + "Erro_ao-tentar_" + descricaoPasso);
+        }
+    }
+
+
+
+
+    /**
      * Fechar Aplicativo
      *
      * @author Kethilyn Leal

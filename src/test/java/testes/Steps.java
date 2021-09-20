@@ -53,12 +53,12 @@ public class Steps {
     @E("insiro dados de contato")
     public void insiro_dados_de_contato() throws IOException, InterruptedException {
         nav.verificoNotasFiscaisLancadasEValidoLayout("verifico_notas_fiscais_lancadas");
-        }
+    }
 
-        @E("crio uma senha e aceito os termos")
-        public void crio_uma_senha_e_aceito_os_termos() throws IOException, InterruptedException {
+    @E("crio uma senha e aceito os termos")
+    public void crio_uma_senha_e_aceito_os_termos() throws IOException, InterruptedException {
         nav.verificoNotasFiscaisLancadasEValidoLayout("verifico_notas_fiscais_lancadas");
-        }
+    }
 
     @E("escolho shopping favorito")
     public void escolho_shopping_favorito() throws IOException, InterruptedException {
