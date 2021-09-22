@@ -1,7 +1,7 @@
 #Author: Kethilyn Leal
 #language: pt
 
-@nExecuta
+@Executa
 Funcionalidade: Testes de funcionalidade no aplicativo IguatemiOne
   Eu como usuário quero executar testes no aplicativo
 
@@ -9,7 +9,7 @@ Funcionalidade: Testes de funcionalidade no aplicativo IguatemiOne
     Dado que eu acesse o aplicativo
 
   @Executa
-  Cenario: Atualizacao de listagem de pontuacao do holder
+  Cenario: Convite para novo membro de plano familia
     Quando insiro os dados para fazer o login positivo
-    E valido listagem de pontuacao e layout
+    E envio convite para novo membro do plano familia
     Entao finalizo o teste

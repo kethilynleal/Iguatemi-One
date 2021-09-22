@@ -86,64 +86,110 @@ public class Navegacoes {
 
     }
 
-    public void facoNovoCadastro(String descricaoPasso)  throws  IOException, InterruptedException {
+    public void novoCadastro(String descricaoPasso)  throws  IOException, InterruptedException {
 
-        metodos.esperarElemento(el.getTelaInicial(),"Espero_elemento_ficar_clicavel");
-        metodos.toqueDesliza(850,500,200,500,"toco_e_deslizo");
-        metodos.esperarElemento(el.getTelaInicialDois(),"Espero_elemento_ficar_clicavel");
-        metodos.toqueDesliza(850,500,200,500,"toco_e_deslizo");
-        metodos.esperarElemento(el.getBotaoComecar(),"Espero_elemento_ficar_clicavel");
+        metodos.esperarElemento(el.getTelaInicial(), "Espero_elemento_ficar_clicavel");
+        metodos.toqueDesliza(850, 500, 200, 500, "toco_e_deslizo");
+        metodos.esperarElemento(el.getTelaInicialDois(), "Espero_elemento_ficar_clicavel");
+        metodos.toqueDesliza(850, 500, 200, 500, "toco_e_deslizo");
+        metodos.esperarElemento(el.getBotaoComecar(), "Espero_elemento_ficar_clicavel");
         metodos.toque(el.getBotaoComecar(), "Clico_no_botao_comecar");
-        metodos.esperarElemento(el.getFazerCadastro(),"Espero_elemento_ficar_clicavel");
-        metodos.toque(el.getFazerCadastro(),"Clico_em_faca_seu_cadastro");
-        metodos.esperarElemento(el.getNome(),"Espero_elemento_ficar_clicavel");
-        metodos.escrever(el.getNome(),"Teste", "Escrevo_nome");
-        metodos.esperarElemento(el.getSobreNome(),"Espero_elemento_ficar_clicavel");
-        metodos.escrever(el.getSobreNome(),"Testes","Escrevo_sobrenome");
+        metodos.esperarElemento(el.getFazerCadastro(), "Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getFazerCadastro(), "Clico_em_faca_seu_cadastro");
+        metodos.esperarElemento(el.getNome(), "Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getNome(),"Toco_no_elemento");
         metodos.esconderTeclado("Escondo_teclado");
-        metodos.toque(el.getClicoEmGenero(),"Clico_na_opcao_genero");
-        metodos.esperarElemento(el.getEscolhoGeneroFeminino(),"Espero_elemento_ficar_clicavel");
-        metodos.toque(el.getEscolhoGeneroFeminino(),"Escolho_sexo_feminino");
+        metodos.escrever(el.getNome(), "Teste", "Escrevo_nome");
+        metodos.esperarElemento(el.getSobreNome(), "Espero_elemento_ficar_clicavel");
+        metodos.escrever(el.getSobreNome(), "Testes", "Escrevo_sobrenome");
+        metodos.esperarElemento(el.getClicoEmGenero(), "Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getClicoEmGenero(), "Clico_na_opcao_genero");
+        metodos.esperarElemento(el.getEscolhoGeneroFeminino(), "Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getEscolhoGeneroFeminino(), "Escolho_sexo_feminino");
+        metodos.esperarElemento(el.getClicoEmCpf(), "Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getClicoEmCpf(), "Clico_na_opcao_cpf");
         metodos.esconderTeclado("Escondo_teclado");
-        metodos.esperarElemento(el.getClicoEmCpf(),"Espero_elemento_ficar_clicavel");
-        metodos.toque(el.getClicoEmCpf(),"Clico_na_opcao_cpf");
-        metodos.escrever(el.getCpf(),"44559662851", "Insiro_o_cpf");
+        metodos.escrever(el.getCpf(), "08823432200", "Insiro_o_cpf");
+        metodos.esperarElemento(el.getClicoNaDataDeNascimento(), "Espero_elemento");
+        metodos.toque(el.getClicoNaDataDeNascimento(), "Clico_na_data_de_nascimento");
+        metodos.esperarElemento(el.getBotaoOkDataDeNascimento(), "Espero_elemento");
+        metodos.toque(el.getBotaoOkDataDeNascimento(), "Clico_no_botao_ok_na_data_de_nascimento");
+        metodos.esperarElemento(el.getPrimeiraSeta(), "Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getPrimeiraSeta(), "Clico_na_seta_para_prosseguir");
+        metodos.esperarElemento(el.getNovoEmail(), "Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getNovoEmail(), "Clico_em_criar_novo_email");
         metodos.esconderTeclado("Escondo_teclado");
-        metodos.esperarElemento(el.getClicoNaDataDeNascimento(),"Espero_elemento");
-        metodos.toque(el.getClicoNaDataDeNascimento(),"Clico_na_data_de_nascimento");
-        metodos.esperarElemento(el.getBotaoOkDataDeNascimento(),"Espero_elemento");
-        metodos.toque(el.getBotaoOkDataDeNascimento(),"Clico_no_botao_ok_na_data_de_nascimento");
-        metodos.esperarElemento(el.getPrimeiraSeta(),"Espero_elemento_ficar_clicavel");
-        metodos.toque(el.getPrimeiraSeta(),"Clico_na_seta_para_prosseguir");
-        metodos.esperarElemento(el.getNovoEmail(),"Espero_elemento_ficar_clicavel");
-        metodos.toque(el.getNovoEmail(),"Clico_em_criar_novo_email");
-        metodos.esperarElemento(el.getNovoEmail(),"Espero_elemento_ficar_clicavel");
-        metodos.escrever(el.getNovoEmail(),"motic41912@sicmag.com", "Insiro_novo_email");
+        metodos.escrever(el.getNovoEmail(), "testedoteste2@ddteste.com", "Insiro_novo_email");
+        metodos.esperarElemento(el.getNovoEmail(), "Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getTelefone(), "Clico_em_criar_telefone");
         metodos.esconderTeclado("Escondo_teclado");
-        metodos.esperarElemento(el.getTelefone(),"Espero_elemento_ficar_clicavel");
-        metodos.escrever(el.getTelefone(),"11952465231","Insiro_numero_de_telefone");
+        metodos.escrever(el.getTelefone(), "11974582136", "Insiro_numero_de_telefone");
+        metodos.esperarElemento(el.getSegundaSeta(), "Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getSegundaSeta(), "Clico_na_seta_para_prosseguir");
+        metodos.esperarElemento(el.getCriarSenha(), "Espero_elemento_ficar_clicavel");
+        metodos.toque(el.getCriarSenha(), "Clico_em_criar_senha");
         metodos.esconderTeclado("Escondo_teclado");
-        metodos.esperarElemento(el.getSegundaSeta(),"Espero_elemento_ficar_clicavel");
-        metodos.toque(el.getSegundaSeta(),"Clico_na_seta_para_prosseguir");
-        metodos.esperarElemento(el.getCriarSenha(),"Espero_elemento_ficar_clicavel");
-        metodos.escrever(el.getCriarSenha(),"Mudar@321", "Crio_nova_senha");
-        metodos.esconderTeclado("Escondo_teclado");
-        metodos.toque(el.getAceitoEnvioDePromocoesENovidadesPorEmail(),"Aceito_envio_de_Novidades_e_Pomocoes_por_email");
-        metodos.toque(el.getAceitoEnvioDePromocoesENovidadesPorNotificacao(),"Aceito_envio_de_Novidades_e_Pomocoes_por_notificacao");
-        metodos.toque(el.getAceitoEnvioDePromocoesENovidadesPorSms(),"Aceito_envio_de_Novidades_e_Pomocoes_por_SMS");
-        metodos.toque(el.getAceiteDeRegulamento(),"Aceito_politica_do_Iguatemi_one");
-        metodos.toque(el.getAceiteDePolitica(),"Aceito_termos_de_politica_de_uso_de_dados");
-        metodos.pausa(2000,"Espero_dois_sugundos");
-        metodos.toqueDesliza(486,500,598,500,"toco_e_deslizo");
-        metodos.esperarElemento(el.getTerceiraSeta(),"Espero_elemento_ficar_clicavel");
-        metodos.toque(el.getTerceiraSeta(),"Clico_na_seta_para_prosseguir");
-        metodos.esperarElemento(el.getShoppingSaoPaulo(),"Espero_elemento_ficar_clicavel");
-        metodos.toque(el.getShoppingSaoPaulo(),"Escolho_Shopping_Sao_Paulo");
-
+        metodos.escrever(el.getCriarSenha(), "Mudar@321", "Crio_nova_senha");
+        metodos.esperarElemento(el.getAceitoEnvioDePromocoesENovidadesPorNotificacao(), "Espero_elemento_ficar_clicavel");
+        metodos.toqueCoordenadasDuplo(106,924,"Aceito_envio_de_Novidades_e_Pomocoes_por_email");
+        metodos.toque(el.getAceitoEnvioDePromocoesENovidadesPorNotificacao(), "Aceito_envio_de_Novidades_e_Pomocoes_por_notificacao");
+        metodos.toque(el.getAceitoEnvioDePromocoesENovidadesPorSms(), "Aceito_envio_de_Novidades_e_Pomocoes_por_SMS");
+        metodos.toque(el.getAceiteDeRegulamento(), "Aceito_politica_do_Iguatemi_one");
+        metodos.toque(el.getAceiteDePolitica(), "Aceito_termos_de_politica_de_uso_de_dados");
 
     }
+        public void escolhoShoppingFavorito(String descricaoPasso)  throws  IOException, InterruptedException {
+
+            metodos.pausa(2000, "Espero_dois_sugundos");
+            metodos.toqueDesliza(486, 500, 598, 500, "toco_e_deslizo");
+            metodos.esperarElemento(el.getTerceiraSeta(), "Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getTerceiraSeta(), "Clico_na_seta_para_prosseguir");
+            metodos.esperarElemento(el.getShoppingSaoPaulo(), "Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getShoppingSaoPaulo(), "Escolho_Shopping_Sao_Paulo");
+
+    }
+        public void envioConviteParaNovoMembroDoPlanoFamilia(String descricaoPasso)  throws  IOException, InterruptedException {
+
+            metodos.esperarElemento(el.getPerfil(),"Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getPerfil(),"Clico_no_botao_perfil");
+            metodos.esperarElemento(el.getMenuPlanoFamilia(),"Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getMenuPlanoFamilia(),"Clico_no_botao_de_plano_familia");
+            metodos.esperarElemento(el.getAdicionarMembro(),"Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getAdicionarMembro(),"Clico_no_botao_adicionar_membro");
+            metodos.esperarElemento(el.getNomeDoNovoMembro(),"Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getNomeDoNovoMembro(),"Clico_para_preencher_o_nome_do_membro");
+            metodos.esperarElemento(el.getNomeDoNovoMembro(),"Espero_elemento_ficar_clicavel");
+            metodos.escrever(el.getNomeDoNovoMembro(),"Teste","Escrevo_nome_do_novo_membro");
+            metodos.esconderTeclado("Escondo_teclado");
+            metodos.esperarElemento(el.getSobrenomeDoNovoMembro(),"Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getSobrenomeDoNovoMembro(),"Clico_para_preencher_o_sobrenome_do_membro");
+            metodos.escrever(el.getSobrenomeDoNovoMembro(),"Testes","Escrevo_sobrenome_do_novo_membro");
+            metodos.esconderTeclado("Escondo_teclado");
+            metodos.esperarElemento(el.getTelefoneDoMembro(),"Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getTelefoneDoMembro(),"Clico_para_inserir_telefone_do_novo_membro");
+            metodos.escrever(el.getTelefoneDoMembro(),"11952652123","Preencho_campo_com_o_numero_do_membro");
+            metodos.esconderTeclado("Escondo_teclado");
+            metodos.esperarElemento(el.getEmailDoNovoMembro(),"Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getEmailDoNovoMembro(),"Clico_para_inserir_email_do_novo_membro");
+            metodos.escrever(el.getEmailDoNovoMembro(),"kethilyn.leal@gmail.com","Escrevo_email_do_novo_membro");
+            metodos.esconderTeclado("Escondo_teclado");
+            metodos.esperarElemento(el.getEnvioDeConvitePorSMS(),"Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getEnvioDeConvitePorSMS(),"Clico_na_opcao_de_envio_por_SMS");
+            metodos.esperarElemento(el.getBotaoOkParaEnvioDeConvitePorSMS(),"Espero_elemento_ficar_clicavel");
+            metodos.toque(el.getBotaoOkParaEnvioDeConvitePorSMS(),"Dou_ok_para_o_envio_do_convite");
+            metodos.capturarTelaDeEnvioDeConvite("01_Envio_de_convite_encaminhado_por_SMS");
+            metodos.pausa(2000,"Espero_cinco_segundos");
+            metodos.validarTexto(el.getBotaoOkParaEnvioDeConvitePorSMS(),"O convite foi enviado! Agora é só aguardar que o(a) teste aceite fazer parte do seu plano.", "Valido_texto");
 
 
+
+
+
+
+
+
+
+        }
 
 
 }

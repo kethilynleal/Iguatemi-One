@@ -32,7 +32,7 @@ public class Steps {
 
     @Quando("faco novo cadastro")
     public void faco_novo_cadastro() throws IOException, InterruptedException {
-        nav.facoNovoCadastro("faco_novo_cadastro");
+        nav.novoCadastro("faco_novo_cadastro");
     }
 
     @E("valido listagem de pontuacao e layout")
@@ -45,24 +45,14 @@ public class Steps {
         nav.verificoNotasFiscaisLancadasEValidoLayout("verifico_notas_fiscais_lancadas");
     }
 
-    @E("dados pessoais")
-    public void dados_pessoais() throws IOException, InterruptedException {
-        nav.verificoNotasFiscaisLancadasEValidoLayout("verifico_notas_fiscais_lancadas");
-    }
-
-    @E("insiro dados de contato")
-    public void insiro_dados_de_contato() throws IOException, InterruptedException {
-        nav.verificoNotasFiscaisLancadasEValidoLayout("verifico_notas_fiscais_lancadas");
-    }
-
-    @E("crio uma senha e aceito os termos")
-    public void crio_uma_senha_e_aceito_os_termos() throws IOException, InterruptedException {
-        nav.verificoNotasFiscaisLancadasEValidoLayout("verifico_notas_fiscais_lancadas");
-    }
-
     @E("escolho shopping favorito")
     public void escolho_shopping_favorito() throws IOException, InterruptedException {
-        nav.verificoNotasFiscaisLancadasEValidoLayout("verifico_notas_fiscais_lancadas");
+        nav.escolhoShoppingFavorito("escolho_shopping_favorito");
+    }
+
+    @E("envio convite para novo membro do plano familia")
+    public void envio_convite_para_novo_membro_do_plano_familia() throws IOException, InterruptedException {
+        nav.envioConviteParaNovoMembroDoPlanoFamilia("envio_convite_para_novo_membro_do_plano_familia");
     }
 
     @Entao("finalizo o teste")

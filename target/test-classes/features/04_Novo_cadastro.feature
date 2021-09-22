@@ -9,8 +9,5 @@ Funcionalidade: Testes de funcionalidade no aplicativo IguatemiOne
   Cenario: Novo cadastro no aplicativo Iguatemi One
     Dado que eu acesse o aplicativo
     Quando faco novo cadastro
-    E dados pessoais
-    E insiro dados de contato
-    E crio uma senha e aceito os termos
     E escolho shopping favorito
     Entao finalizo o teste

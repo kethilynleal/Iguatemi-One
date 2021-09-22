@@ -2,13 +2,14 @@ package paginas;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidTouchAction;
+import io.appium.java_client.touch.TapOptions;
+import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -119,6 +120,18 @@ public class Metodos {
         FileUtils.copyFile(scrFile, new File("./target/Evidencias/NotasFiscais/" + nomePrint + ".png"));
     }
 
+    /**
+     * Capturar Tela de envio de convite
+     *
+     * @author Kethilyn Leal
+     *
+     */
+    public void capturarTelaDeEnvioDeConvite(String nomePrint) throws IOException {
+
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("./target/Evidencias/EnvioDeConvitePlanoFamilia/" + nomePrint + ".png"));
+    }
+
 
     /**
      * Toque
@@ -129,6 +142,42 @@ public class Metodos {
     public void toque(By elemento, String descricaoPasso) throws IOException {
         try {
             driver.findElement(elemento).click();
+        } catch (Exception e) {
+            capturarTelaErros("Erro_ao-tentar_" + descricaoPasso);
+            Assert.fail(LocalDateTime.now() + "Erro_ao-tentar_" + descricaoPasso);
+        }
+    }
+
+    /**
+     * Toque Por Coordenadas
+     *
+     * @author Kethilyn Leal
+     *
+     */
+    public void toqueCoordenadas(int xCoordenadas, int yCoordenadas, String descricaoPasso) throws IOException {
+        try {
+            TouchAction touchAction = new TouchAction(driver);
+            touchAction.tap(PointOption.point(xCoordenadas, yCoordenadas))
+                    .perform();
+        } catch (Exception e) {
+            capturarTelaErros("Erro_ao-tentar_" + descricaoPasso);
+            Assert.fail(LocalDateTime.now() + "Erro_ao-tentar_" + descricaoPasso);
+        }
+    }
+
+    /**
+     * Toque Por Coordenadas Duplo
+     *
+     * @author Kethilyn Leal
+     *
+     */
+    public void toqueCoordenadasDuplo(int xCoordenadas, int yCoordenadas, String descricaoPasso) throws IOException {
+        try {
+            TouchAction touchAction = new TouchAction(driver);
+            touchAction.tap(PointOption.point(xCoordenadas, yCoordenadas))
+                    .perform();
+            touchAction.tap(PointOption.point(xCoordenadas, yCoordenadas))
+                    .perform();
         } catch (Exception e) {
             capturarTelaErros("Erro_ao-tentar_" + descricaoPasso);
             Assert.fail(LocalDateTime.now() + "Erro_ao-tentar_" + descricaoPasso);
