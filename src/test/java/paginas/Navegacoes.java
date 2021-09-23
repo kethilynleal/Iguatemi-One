@@ -178,13 +178,6 @@ public class Navegacoes {
             metodos.esperarElemento(el.getBotaoOkParaEnvioDeConvitePorSMS(),"Espero_elemento_ficar_clicavel");
             metodos.toque(el.getBotaoOkParaEnvioDeConvitePorSMS(),"Dou_ok_para_o_envio_do_convite");
             metodos.capturarTelaDeEnvioDeConvite("01_Envio_de_convite_encaminhado_por_SMS");
-            metodos.pausa(2000,"Espero_cinco_segundos");
-            metodos.validarTexto(el.getBotaoOkParaEnvioDeConvitePorSMS(),"O convite foi enviado! Agora é só aguardar que o(a) teste aceite fazer parte do seu plano.", "Valido_texto");
-
-
-
-
-
 
 
 
