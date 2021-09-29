@@ -67,7 +67,7 @@ public class Navegacoes {
         metodos.toque(el.getCliqueNoMembroDoPlanoFamilia(),"Clico_no_membro_do_plano_familia");
         metodos.pausa(5000,"Espero_meio_segundo");
         metodos.capturarTelaPontuacao("02_Pontuação_de_membros_do_plano_familia");
-        metodos.validarTexto(el.getValidarTextoPlanoFamilia(),"Plano Família: Kethilyn","Valido_texto_de_plano_familia");
+        metodos.validarTexto(el.getValidarTextoPlanoFamilia(),"Kethilyn","Valido_texto_de_plano_familia");
 
     }
 
